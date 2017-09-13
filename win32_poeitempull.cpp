@@ -310,6 +310,7 @@ PlatformLog(log_data *Log, string CurrentID){
         sprintf(Log->file_name.data+7,"%i.log",CurrentDate);
         
         Log->log_file = PlatformOpenFile(Log->file_name.data);
+        Log->file_date = CurrentDate;
     }
     
     if(Log->log_file){
